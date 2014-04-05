@@ -1,0 +1,37 @@
+# Defaults for MapLoc Reporter
+
+-cssurl  => html/mapLoc.css
+-cssfile => ROOT/html/mapLoc.css
+
+-jsurl   => html/mapLoc.js
+-jsfile  => ROOT/html/mapLoc.js
+
+-htmltmp => /stf/biohtml/tmp/MapLocFiles
+
+-customcolors => <<EOF;
+
+TCGA                  Turquoise
+TCGA Normal           #090
+
+dbSNP Polymorphisms   #f90
+
+EOF
+
+
+-DefaultFilter => <<EOF;
+NHGRI GWAS Polymorphisms | freq: 0 | imp: !UNK | par: Polymorphism | track: NHGRI GWAS | w: 6 | nullok: 1
+Region Categories | track: Region
+TCGA Mutations | nullok: 1
+EOF
+
+-ImpactAlias => <<EOF;
+UGLY UNK COD
+NONCODING GEN INT UTR UT3 UT5
+EOF
+
+
+-allowens => <<EOF;
+KNOWN protein_coding
+NOVEL protein_coding
+EOF
+
